@@ -4,8 +4,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
 
-    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
-    <property name="LOG_HOME" value="/home/logs"/>
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径+名称-->
+    <property name="LOG_HOME" value="/home/logs/couponmis"/>
 
     <!--spring boot控制台输出配置-->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
@@ -24,11 +24,11 @@
     </appender>
     <!-- 按照每天生成日志文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_HOME}/couponmis.log</file>
+        <file>${LOG_HOME}.log</file>
         <append>true</append>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- %i表示第几个，不能少这个 -->
-            <fileNamePattern>${LOG_HOME}/couponmis.%d{yyyy-MM-dd_HH}.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_HOME}.%d{yyyy-MM-dd_HH}.%i.log</fileNamePattern>
             <maxHistory>30</maxHistory>
             <maxFileSize>10MB</maxFileSize>
         </rollingPolicy>
