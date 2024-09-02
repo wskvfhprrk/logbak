@@ -1,6 +1,7 @@
 # spring boot 配置使用
 
- ** 确保Spring Boot应用的配置文件（如application.properties或application.yml）中没有与日志相关的冲突设置，或者可以通过以下配置来明确使用Logback,linux下自动生成，不必配置`logging.config`:
+ ** 确保Spring Boot应用的配置文件（如application.properties或application.yml）中没有与日志相关的冲突设置，或者可以通过以下配置来明确使用Logback,linux下自动生成，不必配置`logging.config`:**
+ 
  1、`application.properties`:
  ```
 logging.config=classpath:logbak.xml
