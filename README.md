@@ -1,5 +1,16 @@
-# spring boot logbak.xml
+# spring boot 配置使用
 
+ ** 确保Spring Boot应用的配置文件（如application.properties或application.yml）中没有与日志相关的冲突设置，或者可以通过以下配置来明确使用Logback:
+ 1、`application.properties`:
+ ```
+logging.config=classpath:logback.xml
+```
+2、`application.yml`:
+```
+logging:
+  config: classpath:logback.xml
+```
+以下是`logbak.xml`配置文件
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
